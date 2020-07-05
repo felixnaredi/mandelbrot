@@ -35,14 +35,16 @@ void put_float4x4(const simd_float4x4 * matrix)
 }
 
 enum KeyCode
-{ KEYCODE_SPACE = 49
-, KEYCODE_A     =  0
-, KEYCODE_D     =  2
-, KEYCODE_W     = 13
+{ KEYCODE_A     =  0
 , KEYCODE_S     =  1
+, KEYCODE_D     =  2
+, KEYCODE_H     =  4
+, KEYCODE_C     =  8
+, KEYCODE_W     = 13
 , KEYCODE_R     = 15
 , KEYCODE_PLUS  = 27
-, KEYCODE_MINUS = 44 };
+, KEYCODE_MINUS = 44
+, KEYCODE_SPACE = 49 };
 
 @implementation PreviewControllerWindow
 {
@@ -57,9 +59,9 @@ enum KeyCode
 - (void)resetState
 {
   _keysDownMask = 0;
-  _zfuncIterations = 0;
+  _zfuncIterations = 10;
   _zDirection = -1.0;
-  _d = simd_make_float3(0.0, 0.0, 0.0);
+  _d = simd_make_float3(-0.1, 0.0, 0.15);
   _modelMatrix = simd_matrix(simd_make_float4(1, 0, 0, 0),
                              simd_make_float4(0, 1, 0, 0),
                              simd_make_float4(0, 0, 1, 0),
@@ -157,8 +159,13 @@ enum KeyCode
   
   _keysDownMask |= 1 << event.keyCode;
   
-  if (event.keyCode == 15) { // R
+  if (event.keyCode == KEYCODE_R) {
     _zDirection *= -1;
+  }
+  
+  if (event.keyCode == KEYCODE_H) {
+    PreviewView * view = self.contentView;
+    view.helpTextVisible = !view.helpTextVisible;
   }
 }
 

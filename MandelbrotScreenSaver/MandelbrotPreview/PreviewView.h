@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PreviewView : NSView <CALayerDelegate>
 
 @property (readonly) MandelbrotRenderer *renderer;
+@property (nonatomic) BOOL helpTextVisible;
 
 @end
 

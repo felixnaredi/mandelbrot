@@ -40,7 +40,7 @@ static float maxf(float a, float b)
                                  simd_make_float4(0, 1, 0, 0),
                                  simd_make_float4(0, 0, 1, 0),
                                  simd_make_float4(0, 0, 0, 1));
-  self.iterations = 5;
+  self.iterations = 15;
   
   _device = device;
   _commandQueue = [device newCommandQueue];
