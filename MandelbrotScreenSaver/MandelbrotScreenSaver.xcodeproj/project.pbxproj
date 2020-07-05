@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AA96B90249A4A80004ADB84 /* MandelbrotScreenSaverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA96B8F249A4A80004ADB84 /* MandelbrotScreenSaverView.h */; };
+		0AA96B92249A4A80004ADB84 /* MandelbrotScreenSaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96B91249A4A80004ADB84 /* MandelbrotScreenSaverView.m */; };
+		0AA96B9F249A4C40004ADB84 /* MandelbrotRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA96B9D249A4C40004ADB84 /* MandelbrotRenderer.h */; };
+		0AA96BA0249A4C40004ADB84 /* MandelbrotRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96B9E249A4C40004ADB84 /* MandelbrotRenderer.m */; };
+		0AA96BA9249A4C8B004ADB84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96BA8249A4C8B004ADB84 /* AppDelegate.m */; };
+		0AA96BAB249A4C8C004ADB84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA96BAA249A4C8C004ADB84 /* Assets.xcassets */; };
+		0AA96BAE249A4C8C004ADB84 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA96BAC249A4C8C004ADB84 /* MainMenu.xib */; };
+		0AA96BB1249A4C8C004ADB84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96BB0249A4C8C004ADB84 /* main.m */; };
+		0AA96BB6249A4C96004ADB84 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96B9A249A4AD6004ADB84 /* PreviewView.m */; };
+		0AA96BB8249A64CB004ADB84 /* MandelbrotRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96B9E249A4C40004ADB84 /* MandelbrotRenderer.m */; };
+		0AA96BBA249A7763004ADB84 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96BB9249A7763004ADB84 /* Shaders.metal */; };
+		0AA96BBB249A7765004ADB84 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96BB9249A7763004ADB84 /* Shaders.metal */; };
+		0ABBDF9F249BE6150090D2FF /* PreviewControllerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBDF9E249BE6150090D2FF /* PreviewControllerWindow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AA96B8C249A4A80004ADB84 /* MandelbrotScreenSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MandelbrotScreenSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA96B8F249A4A80004ADB84 /* MandelbrotScreenSaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandelbrotScreenSaverView.h; sourceTree = "<group>"; };
+		0AA96B91249A4A80004ADB84 /* MandelbrotScreenSaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandelbrotScreenSaverView.m; sourceTree = "<group>"; };
+		0AA96B93249A4A80004ADB84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA96B99249A4AD6004ADB84 /* PreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
+		0AA96B9A249A4AD6004ADB84 /* PreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
+		0AA96B9D249A4C40004ADB84 /* MandelbrotRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandelbrotRenderer.h; sourceTree = "<group>"; };
+		0AA96B9E249A4C40004ADB84 /* MandelbrotRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandelbrotRenderer.m; sourceTree = "<group>"; };
+		0AA96BA5249A4C8B004ADB84 /* MandelbrotPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandelbrotPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA96BA7249A4C8B004ADB84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0AA96BA8249A4C8B004ADB84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0AA96BAA249A4C8C004ADB84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AA96BAD249A4C8C004ADB84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0AA96BAF249A4C8C004ADB84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA96BB0249A4C8C004ADB84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AA96BB2249A4C8C004ADB84 /* MandelbrotPreview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MandelbrotPreview.entitlements; sourceTree = "<group>"; };
+		0AA96BB9249A7763004ADB84 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		0ABBDF9D249BE6150090D2FF /* PreviewControllerWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewControllerWindow.h; sourceTree = "<group>"; };
+		0ABBDF9E249BE6150090D2FF /* PreviewControllerWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewControllerWindow.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AA96B89249A4A80004ADB84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA96BA2249A4C8B004ADB84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AA96B82249A4A80004ADB84 = {
+			isa = PBXGroup;
+			children = (
+				0AA96BB9249A7763004ADB84 /* Shaders.metal */,
+				0AA96B9D249A4C40004ADB84 /* MandelbrotRenderer.h */,
+				0AA96B9E249A4C40004ADB84 /* MandelbrotRenderer.m */,
+				0AA96B8E249A4A80004ADB84 /* MandelbrotScreenSaver */,
+				0AA96BA6249A4C8B004ADB84 /* MandelbrotPreview */,
+				0AA96B8D249A4A80004ADB84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AA96B8D249A4A80004ADB84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AA96B8C249A4A80004ADB84 /* MandelbrotScreenSaver.saver */,
+				0AA96BA5249A4C8B004ADB84 /* MandelbrotPreview.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AA96B8E249A4A80004ADB84 /* MandelbrotScreenSaver */ = {
+			isa = PBXGroup;
+			children = (
+				0AA96B8F249A4A80004ADB84 /* MandelbrotScreenSaverView.h */,
+				0AA96B91249A4A80004ADB84 /* MandelbrotScreenSaverView.m */,
+				0AA96B93249A4A80004ADB84 /* Info.plist */,
+			);
+			path = MandelbrotScreenSaver;
+			sourceTree = "<group>";
+		};
+		0AA96BA6249A4C8B004ADB84 /* MandelbrotPreview */ = {
+			isa = PBXGroup;
+			children = (
+				0AA96BA7249A4C8B004ADB84 /* AppDelegate.h */,
+				0AA96BA8249A4C8B004ADB84 /* AppDelegate.m */,
+				0ABBDF9D249BE6150090D2FF /* PreviewControllerWindow.h */,
+				0ABBDF9E249BE6150090D2FF /* PreviewControllerWindow.m */,
+				0AA96B99249A4AD6004ADB84 /* PreviewView.h */,
+				0AA96B9A249A4AD6004ADB84 /* PreviewView.m */,
+				0AA96BAA249A4C8C004ADB84 /* Assets.xcassets */,
+				0AA96BAC249A4C8C004ADB84 /* MainMenu.xib */,
+				0AA96BAF249A4C8C004ADB84 /* Info.plist */,
+				0AA96BB0249A4C8C004ADB84 /* main.m */,
+				0AA96BB2249A4C8C004ADB84 /* MandelbrotPreview.entitlements */,
+			);
+			path = MandelbrotPreview;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0AA96B87249A4A80004ADB84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA96B9F249A4C40004ADB84 /* MandelbrotRenderer.h in Headers */,
+				0AA96B90249A4A80004ADB84 /* MandelbrotScreenSaverView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AA96B8B249A4A80004ADB84 /* MandelbrotScreenSaver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA96B96249A4A80004ADB84 /* Build configuration list for PBXNativeTarget "MandelbrotScreenSaver" */;
+			buildPhases = (
+				0AA96B87249A4A80004ADB84 /* Headers */,
+				0AA96B88249A4A80004ADB84 /* Sources */,
+				0AA96B89249A4A80004ADB84 /* Frameworks */,
+				0AA96B8A249A4A80004ADB84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MandelbrotScreenSaver;
+			productName = MandelbrotScreenSaver;
+			productReference = 0AA96B8C249A4A80004ADB84 /* MandelbrotScreenSaver.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+		0AA96BA4249A4C8B004ADB84 /* MandelbrotPreview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA96BB3249A4C8C004ADB84 /* Build configuration list for PBXNativeTarget "MandelbrotPreview" */;
+			buildPhases = (
+				0AA96BA1249A4C8B004ADB84 /* Sources */,
+				0AA96BA2249A4C8B004ADB84 /* Frameworks */,
+				0AA96BA3249A4C8B004ADB84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MandelbrotPreview;
+			productName = MandelbrotPreview;
+			productReference = 0AA96BA5249A4C8B004ADB84 /* MandelbrotPreview.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AA96B83249A4A80004ADB84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Felix Naredi";
+				TargetAttributes = {
+					0AA96B8B249A4A80004ADB84 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					0AA96BA4249A4C8B004ADB84 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 0AA96B86249A4A80004ADB84 /* Build configuration list for PBXProject "MandelbrotScreenSaver" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AA96B82249A4A80004ADB84;
+			productRefGroup = 0AA96B8D249A4A80004ADB84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AA96B8B249A4A80004ADB84 /* MandelbrotScreenSaver */,
+				0AA96BA4249A4C8B004ADB84 /* MandelbrotPreview */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AA96B8A249A4A80004ADB84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA96BA3249A4C8B004ADB84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA96BAB249A4C8C004ADB84 /* Assets.xcassets in Resources */,
+				0AA96BAE249A4C8C004ADB84 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AA96B88249A4A80004ADB84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA96BBA249A7763004ADB84 /* Shaders.metal in Sources */,
+				0AA96B92249A4A80004ADB84 /* MandelbrotScreenSaverView.m in Sources */,
+				0AA96BA0249A4C40004ADB84 /* MandelbrotRenderer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA96BA1249A4C8B004ADB84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA96BB8249A64CB004ADB84 /* MandelbrotRenderer.m in Sources */,
+				0AA96BB1249A4C8C004ADB84 /* main.m in Sources */,
+				0AA96BB6249A4C96004ADB84 /* PreviewView.m in Sources */,
+				0AA96BA9249A4C8B004ADB84 /* AppDelegate.m in Sources */,
+				0ABBDF9F249BE6150090D2FF /* PreviewControllerWindow.m in Sources */,
+				0AA96BBB249A7765004ADB84 /* Shaders.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0AA96BAC249A4C8C004ADB84 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AA96BAD249A4C8C004ADB84 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AA96B94249A4A80004ADB84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0AA96B95249A4A80004ADB84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0AA96B97249A4A80004ADB84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MandelbrotScreenSaver/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.felixnaredi.MandelbrotScreenSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		0AA96B98249A4A80004ADB84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MandelbrotScreenSaver/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.felixnaredi.MandelbrotScreenSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+		0AA96BB4249A4C8C004ADB84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MandelbrotPreview/MandelbrotPreview.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MandelbrotPreview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.felixnaredi.MandelbrotPreview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0AA96BB5249A4C8C004ADB84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MandelbrotPreview/MandelbrotPreview.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MandelbrotPreview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.felixnaredi.MandelbrotPreview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AA96B86249A4A80004ADB84 /* Build configuration list for PBXProject "MandelbrotScreenSaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA96B94249A4A80004ADB84 /* Debug */,
+				0AA96B95249A4A80004ADB84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA96B96249A4A80004ADB84 /* Build configuration list for PBXNativeTarget "MandelbrotScreenSaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA96B97249A4A80004ADB84 /* Debug */,
+				0AA96B98249A4A80004ADB84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA96BB3249A4C8C004ADB84 /* Build configuration list for PBXNativeTarget "MandelbrotPreview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA96BB4249A4C8C004ADB84 /* Debug */,
+				0AA96BB5249A4C8C004ADB84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AA96B83249A4A80004ADB84 /* Project object */;
+}
