@@ -40,15 +40,15 @@ static float maxf(float a, float b)
                                  simd_make_float4(0, 1, 0, 0),
                                  simd_make_float4(0, 0, 1, 0),
                                  simd_make_float4(0, 0, 0, 1));
-  self.iterations = 15;
+  self.iterations = 0;
   
   _device = device;
   _commandQueue = [device newCommandQueue];
   _antiAliasingTexture = NULL;
   
   MTLRenderPipelineDescriptor *pipelineDescriptor = [MTLRenderPipelineDescriptor new];
-  pipelineDescriptor.vertexFunction = [library newFunctionWithName:@"mandelbrot::VertexShader"];
-  pipelineDescriptor.fragmentFunction = [library newFunctionWithName:@"mandelbrot::FragmentShader"];
+  pipelineDescriptor.vertexFunction = [library newFunctionWithName:@"mandelbrot::threshold::VertexShader"];
+  pipelineDescriptor.fragmentFunction = [library newFunctionWithName:@"mandelbrot::threshold::FragmentShader"];
   pipelineDescriptor.sampleCount = SAMPLE_COUNT;
   pipelineDescriptor.colorAttachments[0].pixelFormat = MTLPixelFormatBGRA8Unorm;
   
@@ -103,8 +103,8 @@ static float maxf(float a, float b)
   @autoreleasepool {
     const uint          _iterations     = maxf(0.0, self.iterations);
     const simd_float4x4 _modelMatrix    = self.modelMatrix;
+    const float         _threshold      = self.threshold;
     const simd_float2   viewport        = simd_make_float2(1, self.height / self.width);
-    const simd_int3     toneModulation  = simd_make_int3(2048, 1, 1024);
     
     id<CAMetalDrawable> drawable = [layer nextDrawable];
     colorAttachment.resolveTexture = drawable.texture;
@@ -114,10 +114,10 @@ static float maxf(float a, float b)
     
     [commandEncoder setRenderPipelineState: _renderPipelineState];
     
-    [commandEncoder setFragmentBytes:&_iterations    length:sizeof(_iterations)    atIndex:0];
-    [commandEncoder setFragmentBytes:&_modelMatrix   length:sizeof(_modelMatrix)   atIndex:1];
-    [commandEncoder setFragmentBytes:&viewport       length:sizeof(viewport)       atIndex:2];
-    [commandEncoder setFragmentBytes:&toneModulation length:sizeof(toneModulation) atIndex:3];
+    [commandEncoder setFragmentBytes:&_modelMatrix length:sizeof(_modelMatrix) atIndex:0];
+    [commandEncoder setFragmentBytes:&viewport     length:sizeof(viewport)     atIndex:1];
+    [commandEncoder setFragmentBytes:&_iterations  length:sizeof(_iterations)  atIndex:2];
+    [commandEncoder setFragmentBytes:&_threshold   length:sizeof(_threshold)   atIndex:3];
     
     [commandEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:4];
     

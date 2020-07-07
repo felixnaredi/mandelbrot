@@ -66,6 +66,8 @@ static NSTextField * text(NSString * str)
   [_helpTextView addArrangedSubview:text(@"    r : toogle zoom in/out")];
   [_helpTextView addArrangedSubview:text(@"    + : increase iterations")];
   [_helpTextView addArrangedSubview:text(@"    - : decrease iterations")];
+  [_helpTextView addArrangedSubview:text(@"    z : increase threshold")];
+  [_helpTextView addArrangedSubview:text(@"    x : decrease threshold")];
   [self addSubview:_helpTextView];
   
   return self;
@@ -113,9 +115,12 @@ static NSTextField * text(NSString * str)
 - (void)setFrameSize:(NSSize)newSize
 {
   [super setFrameSize:newSize];
+  
   self.layer = [self makeBackingLayer];
   _renderer.width = newSize.width;
   _renderer.height = newSize.height;
+  
+  [_helpTextView setFrameSize:newSize];
 }
 
 @end

@@ -10,28 +10,15 @@
 #import "PreviewControllerWindow.h"
 #import "PreviewView.h"
 
-void put_float4x4(const simd_float4x4 * matrix)
+simd_float4x4 modelMatrix(const simd_float3 vector)
 {
-  NSLog(@"\n{ %f, %f, %f, %f }\n{ %f, %f, %f, %f }\n{ %f, %f, %f, %f }\n{ %f, %f, %f, %f }",
-        matrix->columns[0][0],
-        matrix->columns[1][0],
-        matrix->columns[2][0],
-        matrix->columns[3][0],
-        
-        matrix->columns[0][1],
-        matrix->columns[1][1],
-        matrix->columns[2][1],
-        matrix->columns[3][1],
-        
-        matrix->columns[0][2],
-        matrix->columns[1][2],
-        matrix->columns[2][2],
-        matrix->columns[3][2],
-        
-        matrix->columns[0][3],
-        matrix->columns[1][3],
-        matrix->columns[2][3],
-        matrix->columns[3][3]);
+  const float x = vector.x;
+  const float y = vector.y;
+  const float z = vector.z;
+  return simd_matrix(simd_make_float4(z, 0, 0, x),
+                     simd_make_float4(0, z, 0, y),
+                     simd_make_float4(0, 0, 0, 0),
+                     simd_make_float4(0, 0, 0, 0));
 }
 
 enum KeyCode
@@ -39,6 +26,8 @@ enum KeyCode
 , KEYCODE_S     =  1
 , KEYCODE_D     =  2
 , KEYCODE_H     =  4
+, KEYCODE_Z     =  6
+, KEYCODE_X     =  7
 , KEYCODE_C     =  8
 , KEYCODE_W     = 13
 , KEYCODE_R     = 15
@@ -48,10 +37,11 @@ enum KeyCode
 
 @implementation PreviewControllerWindow
 {
-  simd_float4x4 _modelMatrix;
   simd_float3   _d;
+  simd_float3   _i;
   float         _zDirection;
   float         _zfuncIterations;
+  float         _threshold;
   uint8         _keysDown[50];
   uint64_t      _keysDownMask;
 }
@@ -61,27 +51,9 @@ enum KeyCode
   _keysDownMask = 0;
   _zfuncIterations = 10;
   _zDirection = -1.0;
-  _d = simd_make_float3(-0.1, 0.0, 0.15);
-  _modelMatrix = simd_matrix(simd_make_float4(1, 0, 0, 0),
-                             simd_make_float4(0, 1, 0, 0),
-                             simd_make_float4(0, 0, 1, 0),
-                             simd_make_float4(0, 0, 0, 1));
-}
-
-- (void)updateModelMatrix
-{
-  _modelMatrix = simd_mul(_modelMatrix, simd_matrix(simd_make_float4(1, 0, 0, _d.x),
-                                                    simd_make_float4(0, 1, 0, _d.y),
-                                                    simd_make_float4(0, 0, 1, _d.z),
-                                                    simd_make_float4(0, 0, 0,    1)));
-}
-
-- (simd_float4)getModelsTranslateVector
-{
-  return simd_make_float4(_modelMatrix.columns[0][3],
-                          _modelMatrix.columns[1][3],
-                          _modelMatrix.columns[2][3],
-                          _modelMatrix.columns[3][3]);
+  _threshold = 4.294967296e9;
+  _d = simd_make_float3(-0.1, 0.0, 0.0);
+  _i = simd_make_float3( 0.0, 0.0, 1.0);
 }
 
 - (MandelbrotRenderer *)getRenderer
@@ -130,22 +102,23 @@ enum KeyCode
   if (contentView.class == PreviewView.class) {
     [self getRenderer].onWillRender = ^(MandelbrotRenderer * renderer)
     {
-      if ([self keyIsDown:KEYCODE_PLUS])  { self->_zfuncIterations += 0.15; }
-      if ([self keyIsDown:KEYCODE_MINUS]) { self->_zfuncIterations -= 0.15; }
+      if ([self keyIsDown:KEYCODE_PLUS])  { self->_zfuncIterations += 0.25; }
+      if ([self keyIsDown:KEYCODE_MINUS]) { self->_zfuncIterations -= 0.25; }
       
-      const simd_float4 t = [self getModelsTranslateVector];
-      const float m = 1 + t.z;
-      
-      if ([self keyIsDown:KEYCODE_W]) { self->_d.y += 0.0050 * m; }
-      if ([self keyIsDown:KEYCODE_S]) { self->_d.y -= 0.0050 * m; }
-      if ([self keyIsDown:KEYCODE_A]) { self->_d.x -= 0.0050 * m; }
-      if ([self keyIsDown:KEYCODE_D]) { self->_d.x += 0.0050 * m; }
-      if ([self keyIsDown:KEYCODE_SPACE]) { self->_d.z += 0.0025 * m * self->_zDirection; }
+      if ([self keyIsDown:KEYCODE_W]) { self->_d.y += 0.0050; }
+      if ([self keyIsDown:KEYCODE_S]) { self->_d.y -= 0.0050; }
+      if ([self keyIsDown:KEYCODE_A]) { self->_d.x -= 0.0050; }
+      if ([self keyIsDown:KEYCODE_D]) { self->_d.x += 0.0050; }
+      if ([self keyIsDown:KEYCODE_SPACE]) { self->_d.z += 0.0025 * self->_zDirection; }
       self->_d *= 0.85;
-      [self updateModelMatrix];
+      self->_i += self->_d * self->_i.z;
       
-      renderer.modelMatrix = self->_modelMatrix;
+      if ([self keyIsDown:KEYCODE_Z]) { self->_threshold *= 0.89; }
+      if ([self keyIsDown:KEYCODE_X]) { self->_threshold *= 1.11; }
+      
+      renderer.modelMatrix = modelMatrix(self->_i);
       renderer.iterations = (uint) self->_zfuncIterations;
+      renderer.threshold = self->_threshold;
     };
   }
 }

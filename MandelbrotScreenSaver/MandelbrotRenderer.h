@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property void (^onWillRender)(MandelbrotRenderer *renderer);
 @property Boolean isPaused;
 @property simd_float4x4 modelMatrix;
+@property float threshold;
 
 @end
 
