@@ -43,6 +43,17 @@ int CountIterationsUntilThreshold( const complex_t c
   
   return -1;
 }
+  
+float4 Color(float x)
+{
+  switch (uint(x * 30201) % 5) {
+    case 0: return float4(0.1, 0.8, 0.4, 1.0) * x + float4(0.3, 0.1, 0.8, 1.0) * (1 - x);
+    case 1: return float4(0.4, 0.1, 0.8, 1.0) * x + float4(0.8, 0.3, 0.1, 1.0) * (1 - x);
+    case 2: return float4(0.2, 0.9, 0.5, 1.0) * x + float4(0.2, 0.0, 0.7, 1.0) * (1 - x);
+    case 3: return float4(0.3, 0.0, 0.7, 1.0) * x + float4(0.9, 0.4, 0.2, 1.0) * (1 - x);
+  }
+  return float4(0.8, 0.4, 0.1, 1.0) * x + float4(0.1, 0.8, 0.3, 1.0) * (1 - x);
+}
 
 vertex vertex_output_t VertexShader(uint index [[vertex_id]])
 {
@@ -66,7 +77,7 @@ fragment float4 FragmentShader( vertex_output_t in [[stage_in]]
   int k = CountIterationsUntilThreshold(p.xy, threshold, iterations);
   
   if (k < 0) { return float4(0, 0, 0, 1); }
-  return float(k) / float(iterations);
+  return Color(float(k) / float(iterations));
 }
   
 } // namespace threshold

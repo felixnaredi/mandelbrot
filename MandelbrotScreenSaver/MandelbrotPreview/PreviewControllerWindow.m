@@ -17,8 +17,8 @@ simd_float4x4 modelMatrix(const simd_float3 vector)
   const float z = vector.z;
   return simd_matrix(simd_make_float4(z, 0, 0, x),
                      simd_make_float4(0, z, 0, y),
-                     simd_make_float4(0, 0, 0, 0),
-                     simd_make_float4(0, 0, 0, 0));
+                     simd_make_float4(0, 0, 1, 0),
+                     simd_make_float4(0, 0, 0, 1));
 }
 
 enum KeyCode
@@ -42,7 +42,6 @@ enum KeyCode
   float         _zDirection;
   float         _zfuncIterations;
   float         _threshold;
-  uint8         _keysDown[50];
   uint64_t      _keysDownMask;
 }
 
@@ -53,7 +52,7 @@ enum KeyCode
   _zDirection = -1.0;
   _threshold = 4.294967296e9;
   _d = simd_make_float3(-0.1, 0.0, 0.0);
-  _i = simd_make_float3( 0.0, 0.0, 1.0);
+  _i = simd_make_float3( 0.0, 0.0, 1.7);
 }
 
 - (MandelbrotRenderer *)getRenderer
@@ -102,8 +101,8 @@ enum KeyCode
   if (contentView.class == PreviewView.class) {
     [self getRenderer].onWillRender = ^(MandelbrotRenderer * renderer)
     {
-      if ([self keyIsDown:KEYCODE_PLUS])  { self->_zfuncIterations += 0.25; }
-      if ([self keyIsDown:KEYCODE_MINUS]) { self->_zfuncIterations -= 0.25; }
+      if ([self keyIsDown:KEYCODE_PLUS])  { self->_zfuncIterations += 0.45; }
+      if ([self keyIsDown:KEYCODE_MINUS]) { self->_zfuncIterations -= 0.45; }
       
       if ([self keyIsDown:KEYCODE_W]) { self->_d.y += 0.0050; }
       if ([self keyIsDown:KEYCODE_S]) { self->_d.y -= 0.0050; }
