@@ -3,6 +3,33 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[PreviewControllerWindow getRenderer]:PreviewControllerWindow.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.contentView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PreviewControllerWindow setContentView:]:PreviewControllerWindow.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.previewView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MandelbrotRenderer drawInLayer:]:MandelbrotRenderer.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_renderPipelineState">
+            </PersistentString>
+            <PersistentString
+               value = "self.onWillRender">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__45-[AppDelegate applicationDidFinishLaunching:]_block_invoke:AppDelegate.m">
          <PersistentStrings>
             <PersistentString
@@ -10,17 +37,6 @@
             </PersistentString>
             <PersistentString
                value = "view.needsDisplay">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__42-[PreviewControllerWindow setContentView:]_block_invoke:PreviewControllerWindow.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[self getModelMatrix]">
-            </PersistentString>
-            <PersistentString
-               value = "[self keyIsDown:27]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -33,10 +49,32 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[PreviewControllerWindow getRenderer]:PreviewControllerWindow.m">
+         contextName = "__42-[PreviewControllerWindow setContentView:]_block_invoke:PreviewControllerWindow.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.contentView">
+               value = "[self keyIsDown:27]">
+            </PersistentString>
+            <PersistentString
+               value = "[self getModelMatrix]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PreviewControllerWindow initWithContentRect:styleMask:backing:defer:]:PreviewControllerWindow.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.previewView.renderer">
+            </PersistentString>
+            <PersistentString
+               value = "self.previewView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PreviewControllerWindow keyDown:]:PreviewControllerWindow.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.previewView">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -45,20 +83,6 @@
          <PersistentStrings>
             <PersistentString
                value = "self.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[MandelbrotRenderer drawInLayer:]:MandelbrotRenderer.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_zoomIn">
-            </PersistentString>
-            <PersistentString
-               value = "_renderPipelineState">
-            </PersistentString>
-            <PersistentString
-               value = "_z">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

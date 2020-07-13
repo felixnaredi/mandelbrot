@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,6 +18,12 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <viewController id="h1W-ac-3As" customClass="PreviewController">
+            <connections>
+                <outlet property="helpTextView" destination="r5y-lo-NHd" id="HTV-rg-RBU"/>
+                <outlet property="view" destination="EiT-Mj-1SZ" id="b6i-Gh-tPt"/>
+            </connections>
+        </viewController>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="MandelbrotPreview" id="1Xt-HY-uBw">
@@ -678,18 +684,32 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="140" y="154"/>
+            <point key="canvasLocation" x="140" y="279"/>
         </menu>
-        <window title="MandelbrotPreview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="PreviewControllerWindow">
+        <window title="MandelbrotPreview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="600" height="600"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="EiT-Mj-1SZ" customClass="PreviewView">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="r5y-lo-NHd" customClass="HelpTextView">
+                        <rect key="frame" x="20" y="20" width="560" height="560"/>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="r5y-lo-NHd" secondAttribute="trailing" constant="20" id="DIL-y0-9aE"/>
+                    <constraint firstItem="r5y-lo-NHd" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="DRI-nD-hRa"/>
+                    <constraint firstItem="r5y-lo-NHd" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="I9w-Ct-ffc"/>
+                    <constraint firstAttribute="bottom" secondItem="r5y-lo-NHd" secondAttribute="bottom" constant="20" id="ZzP-8S-nul"/>
+                </constraints>
             </view>
-            <point key="canvasLocation" x="139" y="-120"/>
+            <connections>
+                <outlet property="initialFirstResponder" destination="EiT-Mj-1SZ" id="yuj-hs-iYK"/>
+            </connections>
+            <point key="canvasLocation" x="212" y="-56"/>
         </window>
     </objects>
 </document>

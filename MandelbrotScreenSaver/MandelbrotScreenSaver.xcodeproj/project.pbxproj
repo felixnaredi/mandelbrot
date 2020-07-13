@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3EA6B724BB271D00A34CA5 /* HelpTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EA6B624BB271D00A34CA5 /* HelpTextView.m */; };
 		0A8B5FD824B310BC007ED229 /* threshold.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B5FD724B310BC007ED229 /* threshold.metal */; };
 		0A8B5FD924B310BC007ED229 /* threshold.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B5FD724B310BC007ED229 /* threshold.metal */; };
 		0A99E97524B2999300FB768E /* complex.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0A99E97424B2999300FB768E /* complex.metal */; };
@@ -23,10 +24,12 @@
 		0AA96BB8249A64CB004ADB84 /* MandelbrotRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96B9E249A4C40004ADB84 /* MandelbrotRenderer.m */; };
 		0AA96BBA249A7763004ADB84 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96BB9249A7763004ADB84 /* Shaders.metal */; };
 		0AA96BBB249A7765004ADB84 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AA96BB9249A7763004ADB84 /* Shaders.metal */; };
-		0ABBDF9F249BE6150090D2FF /* PreviewControllerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBDF9E249BE6150090D2FF /* PreviewControllerWindow.m */; };
+		0ABBDF9F249BE6150090D2FF /* PreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABBDF9E249BE6150090D2FF /* PreviewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3EA6B524BB271D00A34CA5 /* HelpTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpTextView.h; sourceTree = "<group>"; };
+		0A3EA6B624BB271D00A34CA5 /* HelpTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpTextView.m; sourceTree = "<group>"; };
 		0A8B5FD724B310BC007ED229 /* threshold.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = threshold.metal; sourceTree = "<group>"; };
 		0A99E97424B2999300FB768E /* complex.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = complex.metal; sourceTree = "<group>"; };
 		0AA96B8C249A4A80004ADB84 /* MandelbrotScreenSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MandelbrotScreenSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,8 +49,8 @@
 		0AA96BB0249A4C8C004ADB84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AA96BB2249A4C8C004ADB84 /* MandelbrotPreview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MandelbrotPreview.entitlements; sourceTree = "<group>"; };
 		0AA96BB9249A7763004ADB84 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		0ABBDF9D249BE6150090D2FF /* PreviewControllerWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewControllerWindow.h; sourceTree = "<group>"; };
-		0ABBDF9E249BE6150090D2FF /* PreviewControllerWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewControllerWindow.m; sourceTree = "<group>"; };
+		0ABBDF9D249BE6150090D2FF /* PreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewController.h; sourceTree = "<group>"; };
+		0ABBDF9E249BE6150090D2FF /* PreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewController.m; sourceTree = "<group>"; };
 		0AE6124024B29C500027AD1D /* complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = complex.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,8 +111,10 @@
 			children = (
 				0AA96BA7249A4C8B004ADB84 /* AppDelegate.h */,
 				0AA96BA8249A4C8B004ADB84 /* AppDelegate.m */,
-				0ABBDF9D249BE6150090D2FF /* PreviewControllerWindow.h */,
-				0ABBDF9E249BE6150090D2FF /* PreviewControllerWindow.m */,
+				0A3EA6B524BB271D00A34CA5 /* HelpTextView.h */,
+				0A3EA6B624BB271D00A34CA5 /* HelpTextView.m */,
+				0ABBDF9D249BE6150090D2FF /* PreviewController.h */,
+				0ABBDF9E249BE6150090D2FF /* PreviewController.m */,
 				0AA96B99249A4AD6004ADB84 /* PreviewView.h */,
 				0AA96B9A249A4AD6004ADB84 /* PreviewView.m */,
 				0AA96BAA249A4C8C004ADB84 /* Assets.xcassets */,
@@ -247,9 +252,10 @@
 				0AA96BB1249A4C8C004ADB84 /* main.m in Sources */,
 				0AA96BB6249A4C96004ADB84 /* PreviewView.m in Sources */,
 				0AA96BA9249A4C8B004ADB84 /* AppDelegate.m in Sources */,
-				0ABBDF9F249BE6150090D2FF /* PreviewControllerWindow.m in Sources */,
+				0ABBDF9F249BE6150090D2FF /* PreviewController.m in Sources */,
 				0AA96BBB249A7765004ADB84 /* Shaders.metal in Sources */,
 				0A8B5FD924B310BC007ED229 /* threshold.metal in Sources */,
+				0A3EA6B724BB271D00A34CA5 /* HelpTextView.m in Sources */,
 				0A99E97624B2999300FB768E /* complex.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

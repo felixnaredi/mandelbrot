@@ -31,10 +31,7 @@ static float maxf(float a, float b)
 - (id)initWithDevice:(id<MTLDevice>)device library:(id<MTLLibrary>)library
 {
   self = [super init];
-  
-  if (!self) {
-    return NULL;
-  }
+  if (!self) { return NULL; }
   
   self.modelMatrix = simd_matrix(simd_make_float4(1, 0, 0, 0),
                                  simd_make_float4(0, 1, 0, 0),
@@ -55,9 +52,8 @@ static float maxf(float a, float b)
   [device newRenderPipelineStateWithDescriptor:pipelineDescriptor
                              completionHandler:^(id<MTLRenderPipelineState> renderPipelineState,
                                                  NSError *error) {
-    if (error) {
-      return;
-    }
+    if (error) { return; }
+    
     self->_renderPipelineState = renderPipelineState;
     [self setIsPaused:NO];
   }];
@@ -67,9 +63,7 @@ static float maxf(float a, float b)
 
 - (void)drawInLayer:(CAMetalLayer *)layer
 {
-  if (self.onWillRender != NULL) {
-    self.onWillRender(self);
-  }
+  if (self.onWillRender != NULL) { self.onWillRender(self); }
   
   id<MTLCommandBuffer> commandBuffer = [_commandQueue commandBuffer];
   

@@ -19,10 +19,7 @@
   
   [NSTimer scheduledTimerWithTimeInterval:1.0 / 60.0 repeats:YES block:^(NSTimer *timer) {
     NSView *view = self.window.contentView;
-    
-    if (view == NULL) {
-      return;
-    }
+    if (view == NULL) { return; }
     
     dispatch_async(dispatch_get_main_queue(), ^{ view.needsDisplay = YES; });
   }];
