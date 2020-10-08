@@ -17,8 +17,8 @@ struct complex_t
   float re;
   float im;
   
-  complex_t(float re, float im);
-  complex_t(float2 u);
+  complex_t(const float re, const float im);
+  complex_t(const float2 u);
 };
 
 complex_t operator+(const complex_t a, const complex_t b);

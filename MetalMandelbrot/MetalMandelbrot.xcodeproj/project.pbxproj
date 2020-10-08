@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A2C5B32252FBB8B00A793E6 /* HelpTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C5B2F252FBB8B00A793E6 /* HelpTextView.m */; };
+		0A2C5B33252FBB8B00A793E6 /* PreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C5B2B252FBB8A00A793E6 /* PreviewController.m */; };
+		0A2C5B34252FBB8B00A793E6 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C5B2E252FBB8B00A793E6 /* PreviewView.m */; };
+		0A2C5B35252FBB8B00A793E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C5B2C252FBB8A00A793E6 /* AppDelegate.m */; };
+		0AC55209252FBA6A001479F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC55208252FBA6A001479F6 /* Assets.xcassets */; };
+		0AC5520C252FBA6A001479F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC5520A252FBA6A001479F6 /* MainMenu.xib */; };
+		0AC5520F252FBA6A001479F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5520E252FBA6A001479F6 /* main.m */; };
+		0AC55229252FBB12001479F6 /* MandelbrotRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */; };
+		0AC5522A252FBB12001479F6 /* complex.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55226252FBB12001479F6 /* complex.metal */; };
+		0AC5522B252FBB12001479F6 /* threshold.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55228252FBB12001479F6 /* threshold.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A2C5B2A252FBB8A00A793E6 /* HelpTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelpTextView.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/HelpTextView.h; sourceTree = "<absolute>"; };
+		0A2C5B2B252FBB8A00A793E6 /* PreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PreviewController.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/PreviewController.m; sourceTree = "<absolute>"; };
+		0A2C5B2C252FBB8A00A793E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/AppDelegate.m; sourceTree = "<absolute>"; };
+		0A2C5B2D252FBB8B00A793E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/AppDelegate.h; sourceTree = "<absolute>"; };
+		0A2C5B2E252FBB8B00A793E6 /* PreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PreviewView.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/PreviewView.m; sourceTree = "<absolute>"; };
+		0A2C5B2F252FBB8B00A793E6 /* HelpTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelpTextView.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/HelpTextView.m; sourceTree = "<absolute>"; };
+		0A2C5B30252FBB8B00A793E6 /* PreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PreviewView.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/PreviewView.h; sourceTree = "<absolute>"; };
+		0A2C5B31252FBB8B00A793E6 /* PreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PreviewController.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/PreviewController.h; sourceTree = "<absolute>"; };
+		0AC55202252FBA67001479F6 /* Cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AC55208252FBA6A001479F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AC5520B252FBA6A001479F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0AC5520D252FBA6A001479F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AC5520E252FBA6A001479F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AC55210252FBA6A001479F6 /* Cocoa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cocoa.entitlements; sourceTree = "<group>"; };
+		0AC55224252FBB12001479F6 /* MandelbrotRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MandelbrotRenderer.h; sourceTree = "<group>"; };
+		0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MandelbrotRenderer.m; sourceTree = "<group>"; };
+		0AC55226252FBB12001479F6 /* complex.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = complex.metal; sourceTree = "<group>"; };
+		0AC55227252FBB12001479F6 /* complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = complex.h; sourceTree = "<group>"; };
+		0AC55228252FBB12001479F6 /* threshold.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = threshold.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AC551FF252FBA67001479F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AC551F7252FBA2C001479F6 = {
+			isa = PBXGroup;
+			children = (
+				0AC55227252FBB12001479F6 /* complex.h */,
+				0AC55226252FBB12001479F6 /* complex.metal */,
+				0AC55224252FBB12001479F6 /* MandelbrotRenderer.h */,
+				0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */,
+				0AC55228252FBB12001479F6 /* threshold.metal */,
+				0AC55204252FBA67001479F6 /* Cocoa */,
+				0AC55203252FBA67001479F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AC55203252FBA67001479F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AC55202252FBA67001479F6 /* Cocoa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AC55204252FBA67001479F6 /* Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				0A2C5B2D252FBB8B00A793E6 /* AppDelegate.h */,
+				0A2C5B2C252FBB8A00A793E6 /* AppDelegate.m */,
+				0A2C5B2A252FBB8A00A793E6 /* HelpTextView.h */,
+				0A2C5B2F252FBB8B00A793E6 /* HelpTextView.m */,
+				0A2C5B31252FBB8B00A793E6 /* PreviewController.h */,
+				0A2C5B2B252FBB8A00A793E6 /* PreviewController.m */,
+				0A2C5B30252FBB8B00A793E6 /* PreviewView.h */,
+				0A2C5B2E252FBB8B00A793E6 /* PreviewView.m */,
+				0AC55208252FBA6A001479F6 /* Assets.xcassets */,
+				0AC5520A252FBA6A001479F6 /* MainMenu.xib */,
+				0AC5520D252FBA6A001479F6 /* Info.plist */,
+				0AC5520E252FBA6A001479F6 /* main.m */,
+				0AC55210252FBA6A001479F6 /* Cocoa.entitlements */,
+			);
+			path = Cocoa;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AC55201252FBA67001479F6 /* Cocoa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AC55211252FBA6A001479F6 /* Build configuration list for PBXNativeTarget "Cocoa" */;
+			buildPhases = (
+				0AC551FE252FBA67001479F6 /* Sources */,
+				0AC551FF252FBA67001479F6 /* Frameworks */,
+				0AC55200252FBA67001479F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cocoa;
+			productName = Cocoa;
+			productReference = 0AC55202252FBA67001479F6 /* Cocoa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AC551F8252FBA2C001479F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				TargetAttributes = {
+					0AC55201252FBA67001479F6 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 0AC551FB252FBA2C001479F6 /* Build configuration list for PBXProject "MetalMandelbrot" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AC551F7252FBA2C001479F6;
+			productRefGroup = 0AC55203252FBA67001479F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AC55201252FBA67001479F6 /* Cocoa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AC55200252FBA67001479F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC55209252FBA6A001479F6 /* Assets.xcassets in Resources */,
+				0AC5520C252FBA6A001479F6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AC551FE252FBA67001479F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2C5B33252FBB8B00A793E6 /* PreviewController.m in Sources */,
+				0A2C5B32252FBB8B00A793E6 /* HelpTextView.m in Sources */,
+				0A2C5B34252FBB8B00A793E6 /* PreviewView.m in Sources */,
+				0AC5520F252FBA6A001479F6 /* main.m in Sources */,
+				0A2C5B35252FBB8B00A793E6 /* AppDelegate.m in Sources */,
+				0AC5522A252FBB12001479F6 /* complex.metal in Sources */,
+				0AC5522B252FBB12001479F6 /* threshold.metal in Sources */,
+				0AC55229252FBB12001479F6 /* MandelbrotRenderer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0AC5520A252FBA6A001479F6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AC5520B252FBA6A001479F6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AC551FC252FBA2C001479F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		0AC551FD252FBA2C001479F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		0AC55212252FBA6A001479F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Cocoa/Cocoa.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BZ63G46C9U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Cocoa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.felixnaredi.Cocoa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0AC55213252FBA6A001479F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Cocoa/Cocoa.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BZ63G46C9U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Cocoa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.felixnaredi.Cocoa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AC551FB252FBA2C001479F6 /* Build configuration list for PBXProject "MetalMandelbrot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AC551FC252FBA2C001479F6 /* Debug */,
+				0AC551FD252FBA2C001479F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AC55211252FBA6A001479F6 /* Build configuration list for PBXNativeTarget "Cocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AC55212252FBA6A001479F6 /* Debug */,
+				0AC55213252FBA6A001479F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AC551F8252FBA2C001479F6 /* Project object */;
+}

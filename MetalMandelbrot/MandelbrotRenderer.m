@@ -30,7 +30,7 @@ static float maxf(float a, float b)
 
 - (id)initWithDevice:(id<MTLDevice>)device library:(id<MTLLibrary>)library
 {
-  self = [super init];
+   self = [super init];
   if (!self) { return NULL; }
   
   self.modelMatrix = simd_matrix(simd_make_float4(1, 0, 0, 0),

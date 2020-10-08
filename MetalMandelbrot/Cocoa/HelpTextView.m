@@ -38,8 +38,8 @@ static NSTextField * text(NSString * _Nonnull str)
   stack.orientation = NSUserInterfaceLayoutOrientationVertical;
   stack.spacing = 2.0;
   
-  self.subviews = @[stack];
   for (id line in lines) { [stack addArrangedSubview:text(line)]; }
+  self.subviews = @[stack];
 }
 
 
