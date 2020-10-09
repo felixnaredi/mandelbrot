@@ -43,6 +43,9 @@ int CountIterationsUntilThreshold( const complex_t c
   return -1;
 }
   
+float4 BlendColors(float4 colorA, float4 colorB, float x)
+{ return colorA * (1 - x) + colorB * x; }
+  
 float4 Color(float x)
 {
   switch (uint(x * 30201) % 5) {
@@ -68,14 +71,29 @@ vertex vertex_output_t VertexShader(uint index [[vertex_id]])
 fragment float4 FragmentShader( vertex_output_t in [[stage_in]]
                               , constant float4x4& model_matrix [[buffer(0)]]
                               , constant float2& viewport [[buffer(1)]]
-                              , constant uint& iterations [[buffer(2)]]
-                              , constant float& threshold [[buffer(3)]] )
+                              , constant uint& max_iterations [[buffer(2)]]
+                              , constant float& threshold [[buffer(3)]]
+                              , constant float3* color_gradient [[buffer(4)]]
+                              , constant float* color_gradient_indices [[buffer(5)]]
+                              )
 {
-  float4 p = in.position * float4(viewport, 1, 1) * model_matrix;
-  int k = CountIterationsUntilThreshold(p.xy, threshold, iterations);
+  const float4 p = in.position * float4(viewport, 1, 1) * model_matrix;
+  const int k = CountIterationsUntilThreshold(p.xy, threshold, max_iterations);
   
   if (k < 0) { return { 0, 0, 0, 1 }; }
-  return Color(float(k) / float(iterations));
+  
+  // Normalized distance between zero and max iterations.
+  const float x = float(k) / float(max_iterations);
+  
+  // Find color index greater than `x`.
+  uint i = 1;
+  while (x > color_gradient_indices[i]) { ++i; }
+  
+  // Find the blended color between the indices lesser and greater than `x`.
+  const float b = (x - color_gradient_indices[i - 1])
+                  / (color_gradient_indices[i] - color_gradient_indices[i - 1]);
+  
+  return BlendColors(float4(color_gradient[i - 1], 1), float4(color_gradient[i], 1), b);
 }
   
 } // namespace threshold

@@ -100,6 +100,42 @@ static float maxf(float a, float b)
     const float         _threshold      = self.threshold;
     const simd_float2   viewport        = simd_make_float2(1, self.height / self.width);
     
+    
+    const simd_float3   colors[] = {
+      simd_make_float3(0.0, 0.1, 0.2),
+      simd_make_float3(0.5, 1.0, 0.5),
+      simd_make_float3(0.8, 0.1, 0.1),
+      simd_make_float3(1.0, 0.0, 1.0),
+      simd_make_float3(0.0, 0.0, 1.0),
+      simd_make_float3(0.0, 1.0, 1.0),
+    };
+    const float color_indices[] = {
+      0.0 / 5.0,
+      1.0 / 5.0,
+      2.0 / 5.0,
+      3.0 / 5.0,
+      4.0 / 5.0,
+      5.0 / 5.0 + 0.001
+    };
+    /*
+    const simd_float3   colors[] = {
+      simd_make_float3(0.1, 0.2, 0.0),
+      simd_make_float3(0.1, 0.2, 1.0),
+      simd_make_float3(0.0, 0.1, 0.2),
+      simd_make_float3(1.0, 0.1, 0.2),
+      simd_make_float3(0.2, 0.0, 0.1),
+      simd_make_float3(0.2, 1.0, 0.1),
+    };
+    const float color_indices[] = {
+      0.0 / 3.0,
+      1.0 / 3.0,
+      1.0 / 3.0 + 0.1,
+      2.0 / 3.0,
+      2.0 / 3.0 + 0.1,
+      3.0 / 3.0,
+      3.0 / 3.0 + 0.1,
+    }; */
+    
     id<CAMetalDrawable> drawable = [layer nextDrawable];
     colorAttachment.resolveTexture = drawable.texture;
     
@@ -112,6 +148,8 @@ static float maxf(float a, float b)
     [commandEncoder setFragmentBytes:&viewport     length:sizeof(viewport)     atIndex:1];
     [commandEncoder setFragmentBytes:&_iterations  length:sizeof(_iterations)  atIndex:2];
     [commandEncoder setFragmentBytes:&_threshold   length:sizeof(_threshold)   atIndex:3];
+    [commandEncoder setFragmentBytes:&colors   length:sizeof(colors)   atIndex:4];
+    [commandEncoder setFragmentBytes:&color_indices   length:sizeof(color_indices)   atIndex:5];
     
     [commandEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:4];
     

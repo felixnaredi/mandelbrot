@@ -53,7 +53,7 @@ enum KeyCode
   _keysDownMask = 0;
   _zfuncIterations = 10;
   _zDirection = -1.0;
-  _threshold = 4.294967296e9;
+  _threshold = 5.0;
   _d = simd_make_float3(-0.1, 0.0, 0.0);
   _i = simd_make_float3( 0.0, 0.0, 1.7);
   _helpTextMode = 1;
