@@ -9,21 +9,39 @@
 #ifndef complex_h
 #define complex_h
 
+#include <metal_stdlib>
+using namespace metal;
+
 namespace mandelbrot
 {
 
+template <class F>
 struct complex_t
 {
-  float re;
-  float im;
+  F re;
+  F im;
   
-  complex_t(const float re, const float im);
-  complex_t(const float2 u);
+  complex_t(const F re, const F im)
+  : re(re)
+  , im(im)
+  {}
+  
+  complex_t(const float2 a)
+  : complex_t(a.x, a.y)
+  {}
 };
 
-complex_t operator+(const complex_t a, const complex_t b);
-complex_t operator*(const complex_t a, const complex_t b);
-float abs(const complex_t x);
+template <class F>
+complex_t<F> operator+(const complex_t<F> a, const complex_t<F> b)
+{ return { a.re + b.re, a.im + b.im }; }
+
+template <class F>
+complex_t<F> operator*(const complex_t<F> a, const complex_t<F> b)
+{ return { a.re * b.re - a.im * b.im, a.re * b.im + b.re * a.im }; }
+
+template <class F>
+F abs(const complex_t<F> x)
+{ return sqrt(x.re * x.re + x.im * x.im); }
 
 } // namespace mandelbrot
 

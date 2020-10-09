@@ -7,8 +7,9 @@
 //
 
 #include <metal_stdlib>
-#include "complex.h"
 using namespace metal;
+
+#include "complex.h"
 
 namespace mandelbrot {
 namespace threshold {
@@ -24,11 +25,12 @@ struct vertex_output_t
   { }
 };
   
-int CountIterationsUntilThreshold( const complex_t c
+template <class F>
+int CountIterationsUntilThreshold( const complex_t<F> c
                                  , float threshold
                                  , uint max_iterations )
 {
-  complex_t z = c;
+  auto z = c;
   int count = 0;
   
   while (max_iterations) {
@@ -43,19 +45,22 @@ int CountIterationsUntilThreshold( const complex_t c
   return -1;
 }
   
+template <class F>
+auto Zn( const complex_t<F> c
+        , const float threshold
+        , uint max_iterations )
+{
+  auto z = c;
+  while (max_iterations) {
+    if (abs(z) >= threshold) { return z; }
+    z = z * z + c;
+    --max_iterations;
+  }
+  return complex_t<F>(0);
+}
+  
 float4 BlendColors(float4 colorA, float4 colorB, float x)
 { return colorA * (1 - x) + colorB * x; }
-  
-float4 Color(float x)
-{
-  switch (uint(x * 30201) % 5) {
-    case 0: return float4(0.1, 0.8, 0.4, 1.0) * x + float4(0.3, 0.1, 0.8, 1.0) * (1 - x);
-    case 1: return float4(0.4, 0.1, 0.8, 1.0) * x + float4(0.8, 0.3, 0.1, 1.0) * (1 - x);
-    case 2: return float4(0.2, 0.9, 0.5, 1.0) * x + float4(0.2, 0.0, 0.7, 1.0) * (1 - x);
-    case 3: return float4(0.3, 0.0, 0.7, 1.0) * x + float4(0.9, 0.4, 0.2, 1.0) * (1 - x);
-  }
-  return float4(0.8, 0.4, 0.1, 1.0) * x + float4(0.1, 0.8, 0.3, 1.0) * (1 - x);
-}
 
 vertex vertex_output_t VertexShader(uint index [[vertex_id]])
 {
@@ -78,22 +83,25 @@ fragment float4 FragmentShader( vertex_output_t in [[stage_in]]
                               )
 {
   const float4 p = in.position * float4(viewport, 1, 1) * model_matrix;
-  const int k = CountIterationsUntilThreshold(p.xy, threshold, max_iterations);
-  
-  if (k < 0) { return { 0, 0, 0, 1 }; }
   
   // Normalized distance between zero and max iterations.
-  const float x = float(k) / float(max_iterations);
+  const auto i = CountIterationsUntilThreshold<float>(p.xy, threshold, max_iterations);
+  if (i < 0) { return {0, 0, 0, 1}; }
+  
+  const auto zn = Zn<float>(p.xy, threshold, max_iterations);
+  const auto log_zn = log(abs(zn)) / 2.0;
+  const auto nu = log(log_zn / log(2.0f)) / log(2.0f);
+  const auto x = (i + 1 - nu) / max_iterations;
   
   // Find color index greater than `x`.
-  uint i = 1;
-  while (x > color_gradient_indices[i]) { ++i; }
+  uint j = 1;
+  while (x > color_gradient_indices[i]) { ++j; }
   
   // Find the blended color between the indices lesser and greater than `x`.
-  const float b = (x - color_gradient_indices[i - 1])
-                  / (color_gradient_indices[i] - color_gradient_indices[i - 1]);
+  const float b = (x - color_gradient_indices[j - 1])
+                  / (color_gradient_indices[j] - color_gradient_indices[j - 1]);
   
-  return BlendColors(float4(color_gradient[i - 1], 1), float4(color_gradient[i], 1), b);
+  return BlendColors(float4(color_gradient[j - 1], 1), float4(color_gradient[j], 1), b);
 }
   
 } // namespace threshold

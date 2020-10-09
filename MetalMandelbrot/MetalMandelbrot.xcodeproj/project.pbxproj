@@ -15,7 +15,6 @@
 		0AC5520C252FBA6A001479F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC5520A252FBA6A001479F6 /* MainMenu.xib */; };
 		0AC5520F252FBA6A001479F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5520E252FBA6A001479F6 /* main.m */; };
 		0AC55229252FBB12001479F6 /* MandelbrotRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */; };
-		0AC5522A252FBB12001479F6 /* complex.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55226252FBB12001479F6 /* complex.metal */; };
 		0AC5522B252FBB12001479F6 /* threshold.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55228252FBB12001479F6 /* threshold.metal */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		0AC55210252FBA6A001479F6 /* Cocoa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cocoa.entitlements; sourceTree = "<group>"; };
 		0AC55224252FBB12001479F6 /* MandelbrotRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MandelbrotRenderer.h; sourceTree = "<group>"; };
 		0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MandelbrotRenderer.m; sourceTree = "<group>"; };
-		0AC55226252FBB12001479F6 /* complex.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = complex.metal; sourceTree = "<group>"; };
 		0AC55227252FBB12001479F6 /* complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = complex.h; sourceTree = "<group>"; };
 		0AC55228252FBB12001479F6 /* threshold.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = threshold.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				0AC55227252FBB12001479F6 /* complex.h */,
-				0AC55226252FBB12001479F6 /* complex.metal */,
 				0AC55224252FBB12001479F6 /* MandelbrotRenderer.h */,
 				0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */,
 				0AC55228252FBB12001479F6 /* threshold.metal */,
@@ -166,7 +163,6 @@
 				0A2C5B34252FBB8B00A793E6 /* PreviewView.m in Sources */,
 				0AC5520F252FBA6A001479F6 /* main.m in Sources */,
 				0A2C5B35252FBB8B00A793E6 /* AppDelegate.m in Sources */,
-				0AC5522A252FBB12001479F6 /* complex.metal in Sources */,
 				0AC5522B252FBB12001479F6 /* threshold.metal in Sources */,
 				0AC55229252FBB12001479F6 /* MandelbrotRenderer.m in Sources */,
 			);
