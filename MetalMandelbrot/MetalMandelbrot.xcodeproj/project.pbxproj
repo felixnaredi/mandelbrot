@@ -7,40 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A2C5B32252FBB8B00A793E6 /* HelpTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C5B2F252FBB8B00A793E6 /* HelpTextView.m */; };
-		0A2C5B33252FBB8B00A793E6 /* PreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C5B2B252FBB8A00A793E6 /* PreviewController.m */; };
-		0A2C5B34252FBB8B00A793E6 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C5B2E252FBB8B00A793E6 /* PreviewView.m */; };
-		0A2C5B35252FBB8B00A793E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C5B2C252FBB8A00A793E6 /* AppDelegate.m */; };
-		0AC55209252FBA6A001479F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC55208252FBA6A001479F6 /* Assets.xcassets */; };
-		0AC5520C252FBA6A001479F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC5520A252FBA6A001479F6 /* MainMenu.xib */; };
-		0AC5520F252FBA6A001479F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5520E252FBA6A001479F6 /* main.m */; };
-		0AC55229252FBB12001479F6 /* MandelbrotRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */; };
-		0AC5522B252FBB12001479F6 /* threshold.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55228252FBB12001479F6 /* threshold.metal */; };
+		0A024FEE2531874900DCDDC4 /* MandelbrotRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */; };
+		0A024FEF2531874D00DCDDC4 /* threshold.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55228252FBB12001479F6 /* threshold.metal */; };
+		0A024FF2253191F900DCDDC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A024FF1253191F900DCDDC4 /* AppDelegate.swift */; };
+		0ABC3D09253186C200C451FB /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC3D07253186C200C451FB /* PreviewView.m */; };
+		0ABC3D0A253186C200C451FB /* HelpTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC3D03253186C100C451FB /* HelpTextView.m */; };
+		0AC6A48D253184B000D3B9ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC6A48C253184B000D3B9ED /* Assets.xcassets */; };
+		0AC6A490253184B000D3B9ED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC6A48E253184B000D3B9ED /* MainMenu.xib */; };
+		0AC6A493253184B000D3B9ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC6A492253184B000D3B9ED /* main.m */; };
+		0AC6A49B253184DC00D3B9ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC6A481253183D900D3B9ED /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A2C5B2A252FBB8A00A793E6 /* HelpTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelpTextView.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/HelpTextView.h; sourceTree = "<absolute>"; };
-		0A2C5B2B252FBB8A00A793E6 /* PreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PreviewController.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/PreviewController.m; sourceTree = "<absolute>"; };
-		0A2C5B2C252FBB8A00A793E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/AppDelegate.m; sourceTree = "<absolute>"; };
-		0A2C5B2D252FBB8B00A793E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/AppDelegate.h; sourceTree = "<absolute>"; };
-		0A2C5B2E252FBB8B00A793E6 /* PreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PreviewView.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/PreviewView.m; sourceTree = "<absolute>"; };
-		0A2C5B2F252FBB8B00A793E6 /* HelpTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelpTextView.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/HelpTextView.m; sourceTree = "<absolute>"; };
-		0A2C5B30252FBB8B00A793E6 /* PreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PreviewView.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/PreviewView.h; sourceTree = "<absolute>"; };
-		0A2C5B31252FBB8B00A793E6 /* PreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PreviewController.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/Cocoa/PreviewController.h; sourceTree = "<absolute>"; };
-		0AC55202252FBA67001479F6 /* Cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AC55208252FBA6A001479F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0AC5520B252FBA6A001479F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		0AC5520D252FBA6A001479F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AC5520E252FBA6A001479F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0AC55210252FBA6A001479F6 /* Cocoa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cocoa.entitlements; sourceTree = "<group>"; };
+		0A024FF025318D2A00DCDDC4 /* MandelbrotCocoaApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MandelbrotCocoaApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		0A024FF1253191F900DCDDC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0ABC3D03253186C100C451FB /* HelpTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelpTextView.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/MandelbrotCocoaApp/HelpTextView.m; sourceTree = "<absolute>"; };
+		0ABC3D05253186C200C451FB /* PreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PreviewView.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/MandelbrotCocoaApp/PreviewView.h; sourceTree = "<absolute>"; };
+		0ABC3D06253186C200C451FB /* HelpTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelpTextView.h; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/MandelbrotCocoaApp/HelpTextView.h; sourceTree = "<absolute>"; };
+		0ABC3D07253186C200C451FB /* PreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PreviewView.m; path = /Users/felixnaredi/Documents/git/mandelbrot/MetalMandelbrot/MandelbrotCocoaApp/PreviewView.m; sourceTree = "<absolute>"; };
 		0AC55224252FBB12001479F6 /* MandelbrotRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MandelbrotRenderer.h; sourceTree = "<group>"; };
 		0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MandelbrotRenderer.m; sourceTree = "<group>"; };
 		0AC55227252FBB12001479F6 /* complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = complex.h; sourceTree = "<group>"; };
 		0AC55228252FBB12001479F6 /* threshold.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = threshold.metal; sourceTree = "<group>"; };
+		0AC6A481253183D900D3B9ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AC6A487253184B000D3B9ED /* MandelbrotCocoaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MandelbrotCocoaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AC6A48C253184B000D3B9ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AC6A48F253184B000D3B9ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0AC6A491253184B000D3B9ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AC6A492253184B000D3B9ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AC6A494253184B000D3B9ED /* MandelbrotCocoaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MandelbrotCocoaApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0AC551FF252FBA67001479F6 /* Frameworks */ = {
+		0AC6A484253184B000D3B9ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,7 +56,7 @@
 				0AC55224252FBB12001479F6 /* MandelbrotRenderer.h */,
 				0AC55225252FBB12001479F6 /* MandelbrotRenderer.m */,
 				0AC55228252FBB12001479F6 /* threshold.metal */,
-				0AC55204252FBA67001479F6 /* Cocoa */,
+				0AC6A488253184B000D3B9ED /* MandelbrotCocoaApp */,
 				0AC55203252FBA67001479F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,49 +64,48 @@
 		0AC55203252FBA67001479F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AC55202252FBA67001479F6 /* Cocoa.app */,
+				0AC6A487253184B000D3B9ED /* MandelbrotCocoaApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0AC55204252FBA67001479F6 /* Cocoa */ = {
+		0AC6A488253184B000D3B9ED /* MandelbrotCocoaApp */ = {
 			isa = PBXGroup;
 			children = (
-				0A2C5B2D252FBB8B00A793E6 /* AppDelegate.h */,
-				0A2C5B2C252FBB8A00A793E6 /* AppDelegate.m */,
-				0A2C5B2A252FBB8A00A793E6 /* HelpTextView.h */,
-				0A2C5B2F252FBB8B00A793E6 /* HelpTextView.m */,
-				0A2C5B31252FBB8B00A793E6 /* PreviewController.h */,
-				0A2C5B2B252FBB8A00A793E6 /* PreviewController.m */,
-				0A2C5B30252FBB8B00A793E6 /* PreviewView.h */,
-				0A2C5B2E252FBB8B00A793E6 /* PreviewView.m */,
-				0AC55208252FBA6A001479F6 /* Assets.xcassets */,
-				0AC5520A252FBA6A001479F6 /* MainMenu.xib */,
-				0AC5520D252FBA6A001479F6 /* Info.plist */,
-				0AC5520E252FBA6A001479F6 /* main.m */,
-				0AC55210252FBA6A001479F6 /* Cocoa.entitlements */,
+				0A024FF1253191F900DCDDC4 /* AppDelegate.swift */,
+				0AC6A481253183D900D3B9ED /* ViewController.swift */,
+				0ABC3D06253186C200C451FB /* HelpTextView.h */,
+				0ABC3D03253186C100C451FB /* HelpTextView.m */,
+				0ABC3D05253186C200C451FB /* PreviewView.h */,
+				0ABC3D07253186C200C451FB /* PreviewView.m */,
+				0A024FF025318D2A00DCDDC4 /* MandelbrotCocoaApp-Bridging-Header.h */,
+				0AC6A48C253184B000D3B9ED /* Assets.xcassets */,
+				0AC6A48E253184B000D3B9ED /* MainMenu.xib */,
+				0AC6A491253184B000D3B9ED /* Info.plist */,
+				0AC6A492253184B000D3B9ED /* main.m */,
+				0AC6A494253184B000D3B9ED /* MandelbrotCocoaApp.entitlements */,
 			);
-			path = Cocoa;
+			path = MandelbrotCocoaApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0AC55201252FBA67001479F6 /* Cocoa */ = {
+		0AC6A486253184B000D3B9ED /* MandelbrotCocoaApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AC55211252FBA6A001479F6 /* Build configuration list for PBXNativeTarget "Cocoa" */;
+			buildConfigurationList = 0AC6A495253184B000D3B9ED /* Build configuration list for PBXNativeTarget "MandelbrotCocoaApp" */;
 			buildPhases = (
-				0AC551FE252FBA67001479F6 /* Sources */,
-				0AC551FF252FBA67001479F6 /* Frameworks */,
-				0AC55200252FBA67001479F6 /* Resources */,
+				0AC6A483253184B000D3B9ED /* Sources */,
+				0AC6A484253184B000D3B9ED /* Frameworks */,
+				0AC6A485253184B000D3B9ED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Cocoa;
-			productName = Cocoa;
-			productReference = 0AC55202252FBA67001479F6 /* Cocoa.app */;
+			name = MandelbrotCocoaApp;
+			productName = MandelbrotCocoaApp;
+			productReference = 0AC6A487253184B000D3B9ED /* MandelbrotCocoaApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +116,7 @@
 			attributes = {
 				LastUpgradeCheck = 1160;
 				TargetAttributes = {
-					0AC55201252FBA67001479F6 = {
+					0AC6A486253184B000D3B9ED = {
 						CreatedOnToolsVersion = 11.6;
 					};
 				};
@@ -136,45 +134,45 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0AC55201252FBA67001479F6 /* Cocoa */,
+				0AC6A486253184B000D3B9ED /* MandelbrotCocoaApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0AC55200252FBA67001479F6 /* Resources */ = {
+		0AC6A485253184B000D3B9ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC55209252FBA6A001479F6 /* Assets.xcassets in Resources */,
-				0AC5520C252FBA6A001479F6 /* MainMenu.xib in Resources */,
+				0AC6A48D253184B000D3B9ED /* Assets.xcassets in Resources */,
+				0AC6A490253184B000D3B9ED /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0AC551FE252FBA67001479F6 /* Sources */ = {
+		0AC6A483253184B000D3B9ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2C5B33252FBB8B00A793E6 /* PreviewController.m in Sources */,
-				0A2C5B32252FBB8B00A793E6 /* HelpTextView.m in Sources */,
-				0A2C5B34252FBB8B00A793E6 /* PreviewView.m in Sources */,
-				0AC5520F252FBA6A001479F6 /* main.m in Sources */,
-				0A2C5B35252FBB8B00A793E6 /* AppDelegate.m in Sources */,
-				0AC5522B252FBB12001479F6 /* threshold.metal in Sources */,
-				0AC55229252FBB12001479F6 /* MandelbrotRenderer.m in Sources */,
+				0A024FF2253191F900DCDDC4 /* AppDelegate.swift in Sources */,
+				0ABC3D0A253186C200C451FB /* HelpTextView.m in Sources */,
+				0AC6A49B253184DC00D3B9ED /* ViewController.swift in Sources */,
+				0ABC3D09253186C200C451FB /* PreviewView.m in Sources */,
+				0A024FEF2531874D00DCDDC4 /* threshold.metal in Sources */,
+				0AC6A493253184B000D3B9ED /* main.m in Sources */,
+				0A024FEE2531874900DCDDC4 /* MandelbrotRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0AC5520A252FBA6A001479F6 /* MainMenu.xib */ = {
+		0AC6A48E253184B000D3B9ED /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0AC5520B252FBA6A001479F6 /* Base */,
+				0AC6A48F253184B000D3B9ED /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -194,7 +192,7 @@
 			};
 			name = Release;
 		};
-		0AC55212252FBA6A001479F6 /* Debug */ = {
+		0AC6A496253184B000D3B9ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -227,7 +225,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Cocoa/Cocoa.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MandelbrotCocoaApp/MandelbrotCocoaApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -250,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Cocoa/Info.plist;
+				INFOPLIST_FILE = MandelbrotCocoaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -259,13 +257,15 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = fun.felixnaredi.Cocoa;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.felixnaredi.MandelbrotCocoaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "MandelbrotCocoaApp/MandelbrotCocoaApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		0AC55213252FBA6A001479F6 /* Release */ = {
+		0AC6A497253184B000D3B9ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,7 +298,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Cocoa/Cocoa.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MandelbrotCocoaApp/MandelbrotCocoaApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -315,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Cocoa/Info.plist;
+				INFOPLIST_FILE = MandelbrotCocoaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -323,9 +323,11 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = fun.felixnaredi.Cocoa;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.felixnaredi.MandelbrotCocoaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "MandelbrotCocoaApp/MandelbrotCocoaApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -341,11 +343,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AC55211252FBA6A001479F6 /* Build configuration list for PBXNativeTarget "Cocoa" */ = {
+		0AC6A495253184B000D3B9ED /* Build configuration list for PBXNativeTarget "MandelbrotCocoaApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0AC55212252FBA6A001479F6 /* Debug */,
-				0AC55213252FBA6A001479F6 /* Release */,
+				0AC6A496253184B000D3B9ED /* Debug */,
+				0AC6A497253184B000D3B9ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

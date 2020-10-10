@@ -12,25 +12,25 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MandelbrotCocoaApp" customModuleProvider="target">
             <connections>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="controller" destination="Ehm-XT-OGK" id="e6q-6g-5Mn"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <viewController id="P6A-bk-hIM" customClass="PreviewController">
+        <viewController id="Ehm-XT-OGK" customClass="ViewController" customModule="MandelbrotCocoaApp" customModuleProvider="target">
             <connections>
-                <outlet property="helpTextView" destination="GjQ-gK-AHo" id="5uE-oQ-DIF"/>
-                <outlet property="view" destination="EiT-Mj-1SZ" id="TUf-OT-grx"/>
+                <outlet property="helpTextView" destination="BsS-3M-NPN" id="9Ik-GG-b3g"/>
+                <outlet property="view" destination="EiT-Mj-1SZ" id="7AP-3v-nTe"/>
             </connections>
         </viewController>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="Mandelbrot" id="1Xt-HY-uBw">
+                <menuItem title="MandelbrotCocoaApp" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Mandelbrot" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="MandelbrotCocoaApp" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About Cocoa" id="5kV-Vb-QxS">
+                            <menuItem title="About MandelbrotCocoaApp" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -44,7 +44,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide Cocoa" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide MandelbrotCocoaApp" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -62,7 +62,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit Cocoa" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit MandelbrotCocoaApp" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -675,7 +675,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
-                            <menuItem title="Cocoa Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="MandelbrotCocoaApp Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>
@@ -684,29 +684,29 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="-122" y="345"/>
+            <point key="canvasLocation" x="30" y="335"/>
         </menu>
-        <window title="Mandelbrot" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="MandelbrotCocoaApp" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="601" height="532"/>
+            <rect key="contentRect" x="335" y="390" width="626" height="531"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="EiT-Mj-1SZ" customClass="PreviewView">
-                <rect key="frame" x="0.0" y="0.0" width="601" height="532"/>
+                <rect key="frame" x="0.0" y="0.0" width="626" height="531"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="GjQ-gK-AHo" customClass="HelpTextView">
-                        <rect key="frame" x="20" y="20" width="561" height="492"/>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="BsS-3M-NPN" customClass="HelpTextView">
+                        <rect key="frame" x="20" y="20" width="586" height="491"/>
                     </customView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="GjQ-gK-AHo" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="45g-q9-Kmn"/>
-                    <constraint firstAttribute="bottom" secondItem="GjQ-gK-AHo" secondAttribute="bottom" constant="20" id="K3W-dg-Api"/>
-                    <constraint firstItem="GjQ-gK-AHo" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="qbp-LI-DIh"/>
-                    <constraint firstAttribute="trailing" secondItem="GjQ-gK-AHo" secondAttribute="trailing" constant="20" id="wro-1T-S8m"/>
+                    <constraint firstAttribute="bottom" secondItem="BsS-3M-NPN" secondAttribute="bottom" constant="20" id="BxT-B0-up2"/>
+                    <constraint firstAttribute="trailing" secondItem="BsS-3M-NPN" secondAttribute="trailing" constant="20" id="iRv-nL-Mkq"/>
+                    <constraint firstItem="BsS-3M-NPN" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="tzH-e7-uLa"/>
+                    <constraint firstItem="BsS-3M-NPN" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="zCb-mE-YHH"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="199.5" y="-34"/>
+            <point key="canvasLocation" x="212" y="-34.5"/>
         </window>
     </objects>
 </document>

@@ -1,8 +1,8 @@
 //
 //  main.m
-//  Cocoa
+//  MandelbrotCocoaApp
 //
-//  Created by Felix Naredi on 2020-10-08.
+//  Created by Felix Naredi on 2020-10-10.
 //
 
 #import <Cocoa/Cocoa.h>

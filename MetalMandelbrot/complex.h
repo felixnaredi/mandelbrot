@@ -1,6 +1,6 @@
 //
 //  complex.h
-//  MandelbrotScreenSaver
+//  MetalMandelbrot
 //
 //  Created by Felix Naredi on 2020-07-06.
 //  Copyright © 2020 Felix Naredi. All rights reserved.

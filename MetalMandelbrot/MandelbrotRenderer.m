@@ -1,6 +1,6 @@
 //
 //  MandelbrotRenderer.m
-//  MandelbrotScreenSaver
+//  MetalMandelbrot
 //
 //  Created by Felix Naredi on 2020-06-17.
 //  Copyright © 2020 Felix Naredi. All rights reserved.
@@ -99,7 +99,8 @@ static float maxf(float a, float b)
     const simd_float4x4 _modelMatrix    = self.modelMatrix;
     const float         _threshold      = self.threshold;
     const simd_float2   viewport        = simd_make_float2(1, self.height / self.width);
-          
+        
+    /*
     const simd_float3   colors[] = {
       simd_make_float3(0.1, 0.1, 0.3),
       simd_make_float3(1.0, 0.8, 0.7),
@@ -109,6 +110,22 @@ static float maxf(float a, float b)
       0.0 / 2.0,
       1.0 / 2.0,
       2.0 / 2.0 + 0.001,
+    }; */
+    const simd_float3   colors[] = {
+      simd_make_float3(0.8, 0.0, 0.0),
+      simd_make_float3(0.4, 0.6, 0.0),
+      simd_make_float3(0.0, 0.8, 0.0),
+      simd_make_float3(0.0, 0.4, 0.6),
+      simd_make_float3(0.0, 0.0, 0.8),
+      simd_make_float3(0.6, 0.0, 0.4),
+    };
+    const float color_indices[] = {
+      0.0 / 5.0,
+      1.0 / 5.0,
+      2.0 / 5.0,
+      3.0 / 5.0,
+      4.0 / 5.0,
+      5.0 / 5.0 + 0.001,
     };
     
     id<CAMetalDrawable> drawable = [layer nextDrawable];

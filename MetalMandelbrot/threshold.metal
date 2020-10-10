@@ -1,6 +1,6 @@
 //
-//  infit.metal
-//  MandelbrotScreenSaver
+//  threshold.metal
+//  MetalMandelbrot
 //
 //  Created by Felix Naredi on 2020-07-06.
 //  Copyright © 2020 Felix Naredi. All rights reserved.
@@ -91,11 +91,11 @@ fragment float4 FragmentShader( vertex_output_t in [[stage_in]]
   const auto zn = Zn<float>(p.xy, threshold, max_iterations);
   const auto log_zn = log(abs(zn)) / 2.0;
   const auto nu = log(log_zn / log(2.0f)) / log(2.0f);
-  const auto x = (i + 1 - nu) / max_iterations;
+  const auto x = (float(i) + 1 - nu) / float(max_iterations);
   
   // Find color index greater than `x`.
   uint j = 1;
-  while (x > color_gradient_indices[i]) { ++j; }
+  while (x > color_gradient_indices[j]) { ++j; }
   
   // Find the blended color between the indices lesser and greater than `x`.
   const float b = (x - color_gradient_indices[j - 1])
