@@ -67,8 +67,13 @@ class ViewController: NSViewController {
   
   /// Process input and updates the views if necessary.
   func step() {
-    if keysDown.contains(.plus) { maxIterations += 0.45 }
-    if keysDown.contains(.minus) { maxIterations -= 0.45 }
+    if (maxIterations > 300) {
+      if keysDown.contains(.plus) { maxIterations *= 1.0025 }
+      if keysDown.contains(.minus) { maxIterations *= 0.9975 }
+    } else {
+      if keysDown.contains(.plus) { maxIterations += 0.55 }
+      if keysDown.contains(.minus) { maxIterations -= 0.55 }
+    }
     if keysDown.contains(.z) { threshold *= 0.99 }
     if keysDown.contains(.x) { threshold *= 1.01 }
     

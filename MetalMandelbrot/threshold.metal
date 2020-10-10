@@ -95,7 +95,7 @@ fragment float4 FragmentShader( vertex_output_t in [[stage_in]]
   
   // Find color index greater than `x`.
   uint j = 1;
-  while (x > color_gradient_indices[j]) { ++j; }
+  while (x >= color_gradient_indices[j]) { ++j; }
   
   // Find the blended color between the indices lesser and greater than `x`.
   const float b = (x - color_gradient_indices[j - 1])

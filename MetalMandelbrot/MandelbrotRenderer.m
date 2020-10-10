@@ -100,17 +100,41 @@ static float maxf(float a, float b)
     const float         _threshold      = self.threshold;
     const simd_float2   viewport        = simd_make_float2(1, self.height / self.width);
         
+    //
+    // Color schemes.
+    //
+    
     /*
-    const simd_float3   colors[] = {
-      simd_make_float3(0.1, 0.1, 0.3),
-      simd_make_float3(1.0, 0.8, 0.7),
-      simd_make_float3(0.8, 0.5, 0.0),
-    };
-    const float color_indices[] = {
-      0.0 / 2.0,
-      1.0 / 2.0,
-      2.0 / 2.0 + 0.001,
+    // Arcane
+    const float k = 1.5;
+    const simd_float3 colors[] = {
+      simd_make_float3(0.01, 0.01, 0.15),
+      simd_make_float3(0.01, 0.01, 0.15),
+      simd_make_float3(0.01, 0.01, 0.15),
+      simd_make_float3(0.01, 0.01, 0.25),
+      simd_make_float3(0.01, 0.01, 0.15),
+      simd_make_float3(1.00, 0.80, 0.70),
+      simd_make_float3(0.40, 0.25, 0.00),
+      simd_make_float3(0.80, 0.65, 0.40),
+      simd_make_float3(1.00, 0.80, 0.70),
+      simd_make_float3(0.21, 0.21, 0.45),
+      simd_make_float3(0.01, 0.01, 0.35),
+      simd_make_float3(0.01, 0.01, 0.25),
+      simd_make_float3(1.00, 0.80, 0.70),
     }; */
+    
+    
+    // Ember
+    const float k = 5.5;
+    const simd_float3   colors[] = {
+      simd_make_float3(0.05, 0.05, 0.1),
+      simd_make_float3(9.0, 0.8, 0.4),
+      simd_make_float3(0.6, 0.4, 0.0),
+    };
+
+    /*
+    // Rainbow
+    const float k = 1.0;
     const simd_float3   colors[] = {
       simd_make_float3(0.8, 0.0, 0.0),
       simd_make_float3(0.4, 0.6, 0.0),
@@ -118,15 +142,27 @@ static float maxf(float a, float b)
       simd_make_float3(0.0, 0.4, 0.6),
       simd_make_float3(0.0, 0.0, 0.8),
       simd_make_float3(0.6, 0.0, 0.4),
-    };
-    const float color_indices[] = {
-      0.0 / 5.0,
-      1.0 / 5.0,
-      2.0 / 5.0,
-      3.0 / 5.0,
-      4.0 / 5.0,
-      5.0 / 5.0 + 0.001,
-    };
+    }; */
+    
+    //
+    // Index generator.
+    //
+    
+    const uint len = sizeof(colors) / sizeof(simd_float3);
+    float color_indices[len];
+    float s = 0;
+    float c = 1.0;
+    
+    for (int i = 1; i < len; ++i) {
+      s += 1.0 / c;
+      color_indices[i] = s;
+      c /= k;
+    }
+    for (int i = 1; i < len - 1; ++i) {
+      color_indices[i] /= s;
+    }
+    color_indices[0] = 0;
+    color_indices[len - 1] = 1;
     
     id<CAMetalDrawable> drawable = [layer nextDrawable];
     colorAttachment.resolveTexture = drawable.texture;
